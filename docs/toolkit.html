@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Trainer's Edge Toolkit — a complete six-section facilitation system for professional trainers, by Denise Ryan, Communications Specialist.">
+<title>The Trainer's Edge Toolkit — Denise Ryan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#0d6485;
+  --mid:#1c85a3;
+  --bright:#00a8cc;
+  --light-blue:#edf7fb;
+  --cream:#f6fbfd;
+  --white:#ffffff;
+  --text:#1a3a45;
+  --text-light:#4a6878;
+  --border:#cce6f0;
+  --warm-grey:#8aaab4;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;font-size:16px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,80,120,0.98);backdrop-filter:blur(8px);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.82);text-decoration:none;font-size:0.82rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--bright)}
+.nav-cta{background:var(--bright);color:var(--dark);padding:10px 24px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s}
+.nav-cta:hover{background:#52c8e0}
+
+/* HERO */
+.toolkit-hero{min-height:70vh;background:var(--dark);display:flex;align-items:center;padding:140px 40px 80px;position:relative;overflow:hidden;border-top:4px solid var(--bright)}
+.toolkit-hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.toolkit-label{font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--bright);margin-bottom:20px}
+.toolkit-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);font-weight:500;color:var(--white);line-height:1.15;margin-bottom:20px}
+.toolkit-hero h1 em{font-style:italic;color:var(--bright)}
+.toolkit-hero-sub{font-size:1rem;color:rgba(255,255,255,0.75);margin-bottom:36px;line-height:1.75;font-weight:300}
+.toolkit-hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--bright);color:var(--dark);padding:15px 34px;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block;border-radius:2px}
+.btn-primary:hover{background:#52c8e0}
+.btn-outline-light{border:2px solid rgba(255,255,255,0.4);color:var(--white);padding:13px 32px;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;display:inline-block;border-radius:2px}
+.btn-outline-light:hover{border-color:var(--bright);color:var(--bright)}
+.toolkit-price{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:600;color:var(--white)}
+.toolkit-price span{font-size:0.95rem;color:rgba(255,255,255,0.55);font-weight:400;font-family:'Inter',sans-serif;display:block;margin-top:2px}
+.toolkit-hero-image{width:100%;border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,0.35);display:block}
+
+/* SECTIONS */
+section{padding:96px 40px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--mid);margin-bottom:12px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.6rem);font-weight:500;color:var(--dark);line-height:1.2;margin-bottom:20px}
+.section-sub{font-size:1rem;color:var(--text-light);max-width:640px;line-height:1.75}
+
+/* WHY */
+.why{background:var(--cream)}
+.why-body{font-size:1.05rem;color:var(--text-light);line-height:1.85;max-width:760px;margin-top:24px}
+.why-body strong{color:var(--dark)}
+
+/* CONTENTS */
+.contents{background:var(--white)}
+.contents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:56px}
+.contents-card{background:var(--white);padding:32px 28px;transition:background 0.2s}
+.contents-card:hover{background:var(--light-blue)}
+.contents-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--border);line-height:1;margin-bottom:14px}
+.contents-title{font-size:0.95rem;font-weight:600;color:var(--dark);margin-bottom:10px;line-height:1.3}
+.contents-body{font-size:0.85rem;color:var(--text-light);line-height:1.7}
+
+/* DETAILS */
+.details{background:var(--light-blue)}
+.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;background:var(--border)}
+.details-card{background:var(--white);padding:36px 36px}
+.details-card-title{font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:14px}
+.details-card-body{font-size:0.9rem;color:var(--text-light);line-height:1.8}
+.details-card-body a{color:var(--dark);font-weight:500}
+
+/* CTA */
+.toolkit-cta{background:var(--dark);text-align:center}
+.toolkit-cta .section-inner{max-width:700px}
+.toolkit-cta .section-label{color:var(--bright)}
+.toolkit-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:var(--white);line-height:1.3;margin-bottom:20px}
+.toolkit-cta-body{font-size:0.98rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:36px}
+
+/* FOOTER */
+footer{background:var(--dark);padding:40px 40px 32px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,0.1);padding-top:28px}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3)}
+.footer-back a{font-size:0.78rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.footer-back a:hover{color:var(--bright)}
+
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  section{padding:72px 24px}
+  .toolkit-hero{padding:110px 24px 60px}
+  .toolkit-hero-inner{grid-template-columns:1fr;gap:40px}
+  .contents-grid{grid-template-columns:1fr}
+  .details-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" style="text-decoration:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 52" height="44" aria-label="Denise Ryan Communications Specialist">
+  <rect x="0" y="4" width="3" height="44" fill="#00a8cc"/>
+  <text x="12" y="30" font-family="Georgia,serif" font-size="24" font-weight="400" letter-spacing="2" fill="#ffffff">Denise Ryan</text>
+  <text x="12" y="46" font-family="Arial,sans-serif" font-size="8" font-weight="400" letter-spacing="3.5" fill="#00a8cc">COMMUNICATIONS SPECIALIST</text>
+</svg></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#contents">What's Inside</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="https://buy.stripe.com/fZu9AT3jj7r2dQhbGyebu02" class="nav-cta">Buy the Toolkit</a>
+  </div>
+</nav>
+
+<section class="toolkit-hero" id="top">
+  <div class="toolkit-hero-inner">
+    <div>
+      <p class="toolkit-label">The Trainer's Edge Toolkit</p>
+      <h1>A working system for <em>professional trainers,</em> not a workbook that gathers dust.</h1>
+      <p class="toolkit-hero-sub">Turning a subject matter expert into a confident trainer takes more than a single workshop — it takes a system they keep coming back to. This is that system: six sections of practical, ready-to-use resources built from 20+ years of corporate facilitation experience across the UAE, Europe and North America.</p>
+      <div class="toolkit-hero-actions">
+        <div>
+          <div class="toolkit-price">$497<span>USD · one-time</span></div>
+        </div>
+        <a href="https://buy.stripe.com/fZu9AT3jj7r2dQhbGyebu02" class="btn-primary">Buy Now — Instant Access</a>
+        <a href="#contents" class="btn-outline-light">See What's Inside</a>
+      </div>
+    </div>
+    <div>
+      <img src="stripe_product.png" alt="The Trainer's Edge Toolkit" class="toolkit-hero-image">
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="section-inner">
+    <p class="section-label">Why This Toolkit</p>
+    <h2 class="section-title">The reference your training team will actually open before every session.</h2>
+    <p class="why-body">Most training toolkits are read once and shelved. <strong>The Trainer's Edge Toolkit</strong> is built to be reused — a living reference system, not a one-off download. It's the same material behind Denise Ryan's live Train the Trainer programmes, packaged so your team can use it independently, session after session, long after the workshop ends.</p>
+  </div>
+</section>
+
+<section class="contents" id="contents">
+  <div class="section-inner">
+    <p class="section-label">What's Inside</p>
+    <h2 class="section-title">Six sections. One complete system.</h2>
+    <p class="section-sub">Editable digital files (Word/PowerPoint), delivered instantly on purchase.</p>
+    <div class="contents-grid">
+      <div class="contents-card">
+        <div class="contents-num">01</div>
+        <div class="contents-title">Trainer Handbook</div>
+        <p class="contents-body">16 chapters covering mindset, adult learning theory, room setup, virtual delivery, nerves, timing, questioning, group dynamics, feedback and debrief.</p>
+      </div>
+      <div class="contents-card">
+        <div class="contents-num">02</div>
+        <div class="contents-title">Activity, Icebreaker &amp; Trainer Scripts Library</div>
+        <p class="contents-body">10 full activity cards, 22 categorised icebreakers, and 8 categories of ready-to-adapt trainer language.</p>
+      </div>
+      <div class="contents-card">
+        <div class="contents-num">03</div>
+        <div class="contents-title">Facilitation Checklists &amp; Trainer Templates</div>
+        <p class="contents-body">7 before/during/after checklists plus 9 editable session-planning templates.</p>
+      </div>
+      <div class="contents-card">
+        <div class="contents-num">04</div>
+        <div class="contents-title">Evaluation Toolkit</div>
+        <p class="contents-body">Kirkpatrick's four levels in full: reaction surveys, knowledge checks, observation forms, manager feedback, and 30/90-day follow-ups.</p>
+      </div>
+      <div class="contents-card">
+        <div class="contents-num">05</div>
+        <div class="contents-title">Presentation, Digital Resource &amp; AI Toolkit</div>
+        <p class="contents-body">Slide design guidance, a curated current digital tools list, and 10 ready-to-use AI prompts for trainers.</p>
+      </div>
+      <div class="contents-card">
+        <div class="contents-num">06</div>
+        <div class="contents-title">Bonus Resources</div>
+        <p class="contents-body">Trainer self-assessment, a three-level competency framework, a professional development planner, and a curated reading list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="details">
+  <div class="section-inner">
+    <p class="section-label">The Details</p>
+    <h2 class="section-title">Format &amp; licence</h2>
+    <div class="details-grid">
+      <div class="details-card">
+        <div class="details-card-title">Format &amp; Delivery</div>
+        <p class="details-card-body">Editable digital files (Word/PowerPoint), delivered instantly on purchase via Stripe. No physical shipping, no waiting.</p>
+      </div>
+      <div class="details-card">
+        <div class="details-card-title">Licence</div>
+        <p class="details-card-body">Single-user licence for your own training delivery. Organisational/team licensing available on request — contact <a href="mailto:denise@deniseryancoaching.com">denise@deniseryancoaching.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="toolkit-cta">
+  <div class="section-inner">
+    <p class="section-label">Get the Toolkit</p>
+    <h2 class="toolkit-cta-title">Not a workbook. A working system.</h2>
+    <p class="toolkit-cta-body">20 years of facilitation expertise, packaged into one toolkit your team will actually use.</p>
+    <a href="https://buy.stripe.com/fZu9AT3jj7r2dQhbGyebu02" class="btn-primary">Buy Now — $497 USD</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2026 Denise Ryan Coaching · Communications Specialist · Dubai, UAE</p>
+    <div class="footer-back"><a href="index.html">← Back to Home</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
